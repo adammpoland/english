@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+     <title>Homebase</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <link rel="stylesheet" type="text/css" href="orangeblue.css">
+     <style>
+        body{
+          background-image: url("img/0.gif");
+          background-size: cover;
+          /*
+          -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+          */
+        }
+
+       
+     </style>
+  </head>
+
+  <body>
+
+      <br>
+
+      <div class="container">
+          <h3 class="title">ENGLISH</h3>
+      </div>
+      <br>
+      <div class="container ">
+          <h6>Write a sentence:</h6>
+          <form action="/addNewURL" method="POST">
+            <br>
+            <input type="text" placeholder="Sentence" name="newURL" id="url" class="input-field">
+            <br>
+           
+            <input type="submit" class="btn" value="Submit"> 
+          </form>
+      </div>
+
+      <br>
+      <% if(Numberofwords > 0){ %>
+      <div class="container ">
+        <p>Number of Words: <%=Numberofwords%></p>
+        <p>Subject: <%=Subject%></p>
+        <p>Verb: <%=Verb%></p>
+        <p>Object: <%=Object%></p>
+        <% for (var i = 0; i< Words.length; i++) {%>
+          <p><%=Words[i]%>: <%=Partsofspeech[i]%> </p>
+        <% } %>
+      </div>
+      <%} else {%>
+
+
+      <% } %>
+
+
+  </body>
+</html>

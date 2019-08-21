@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+     <title>Homebase</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+         
+     <link rel="stylesheet" type="text/css" href="darkred.css">
+     <style>
+            body{
+                background-image: url("img/blackDots.gif");
+                background-repeat: no-repeat;
+                background-size: cover;
+        
+                /*
+                -webkit-transform: rotate(30deg);
+                transform: rotate(30deg);
+                */
+            }
+            
+         </style>
+  </head>
+
+  <body>
+
+    
+
+      <br>
+
+      <div class="container">
+          <h1 class="title">Add Word</h1>
+      </div>
+      <br>
+      <div class="container">
+           <h2>Add Word:</h2>
+           <form action="/addNewWord" method="POST">
+            <br>
+            <input type="text" placeholder="Word" name="word" id="url" class="input-field">
+            <br>
+           <br>
+           <input type="text" placeholder="Part Of Speech" name="partOfSpeech" class="input-field">
+           <br>
+            <br>
+            <input type="text" placeholder="Definition" name="definition" class="input-field">
+            <br>
+            <br>
+           
+            <input type="submit" class="btn" value="ADD WORD"> 
+          </form>
+        </div>
+
+
+  </body>
+</html>

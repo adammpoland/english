@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+     <title>Homebase</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <link rel="stylesheet" type="text/css" href="darkred.css">
+     
+     <style>
+         body{
+            background-image: url("img/blackDots.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+                 }
+     </style>
+
+  </head>
+
+  <body>
+
+      <ul>
+        <li><a class="active" href="/">UPLOADER</a></li>
+        <li><a href="/savedURLs">SAVED URLS</a></li>
+        <li><a href="/contacts">CONTACTS</a></li>
+      </ul>
+
+      <br>
+
+      <div class="container">
+          <h1 class="title"><%=person.name%></h1>
+      </div>
+
+      <br>
+
+      <div class="container">
+        <h2>Add Note:</h2>
+        <form action="/addNote/<%=person.id%>" method="POST" enctype="multipart/form-data">
+         <br>
+         <input type="text" placeholder="Note" name="note" id="url" class="input-field">
+
+
+         <input type="submit" class="btn" value="ADD PERSON"> 
+       </form>
+   </div>
+   <% for(let i=0; i<person.notes.length; i++) {%>
+    <p><%=person.notes[i].note%></p>
+
+    <% } %>
+
+  </body>
+</html>
